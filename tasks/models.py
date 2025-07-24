@@ -29,7 +29,7 @@ class Task(models.Model):
     project = models.ForeignKey(Project, on_delete=models.CASCADE, related_name='tasks')
     title = models.CharField(max_length=100)
     description = models.TextField()
-    status = models.CharField(choices=STATUS_CHOICES, default='active')
+    status = models.CharField(max_length=15, choices=STATUS_CHOICES, default='active')
     priority = models.CharField(max_length=10, choices=PRIORITY_CHOICES, default='high')
     created_at = models.DateTimeField(auto_now_add=True)
 

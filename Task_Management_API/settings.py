@@ -91,7 +91,7 @@ WSGI_APPLICATION = 'Task_Management_API.wsgi.application'
 import os
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
-db = os.environ.get("DB_TYPE", "sql")
+db = os.environ.get("DB_TYPE", "mysql")
 if db == "mysql":
     DATABASES = {
         'default': {
