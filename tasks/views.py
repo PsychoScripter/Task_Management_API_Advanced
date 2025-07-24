@@ -36,7 +36,7 @@ class TaskDetailView(RetrieveUpdateDestroyAPIView):
     queryset = Task.objects.all()
     serializer_class = TaskSerializer
     lookup_field = 'id'
-    permission_classes = [IsAuthenticated,IsOwnerOrReadOnly]
+    permission_classes = [IsOwnerOrReadOnly]
 
 class ProjectListView(ListCreateAPIView):
     queryset = Project.objects.all()
@@ -47,7 +47,7 @@ class ProjectDetailView(RetrieveUpdateDestroyAPIView):
     queryset = Project.objects.all()
     serializer_class = ProjectSerializer
     lookup_field = 'id'
-    permission_classes = [IsAuthenticated,IsOwnerOrReadOnly]
+    permission_classes = [IsOwnerOrReadOnly]
 
 
 
